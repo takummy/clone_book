@@ -19,6 +19,7 @@
                 </div>
             <% end %>
             <%= yield %>
+            <%= debug session[:user_id] %>
         </div>
         
         <%= render 'layouts/footer' %>

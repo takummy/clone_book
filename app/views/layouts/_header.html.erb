@@ -3,9 +3,14 @@
         <div class="container-fluid row">   
             <%= link_to 'Clone Book', root_path, id: "logo" %>
             <ul class="nav navbar-nav navbar-right">
-                    <li><%= link_to 'プロフィール', '#' %></li>
+                <% if logged_in? %>
+                    <li><%= link_to 'プロフィール', user_path(current_user.id) %></li>
                     <li><%= link_to 'ユーザーリスト', users_path %></li>
+                    <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+                <% else %>
                     <li><%= link_to '新規登録', new_user_path %></li>
+                    <li><%= link_to 'ログイン', login_path %></li>
+                <% end %>
             </ul>
         </div>
     </nav>

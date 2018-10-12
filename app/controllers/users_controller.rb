@@ -12,6 +12,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in(@user)
       flash[:success] = "登録完了"
       redirect_to user_path(@user.id)
     else
