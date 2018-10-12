@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update, :destroy]
+before_action :require_login, only: [:index, :edit, :update]
+before_action :correct_user, only: [:edit, :update]
 
   def new
     if params[:back]
