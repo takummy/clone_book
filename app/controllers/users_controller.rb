@@ -37,6 +37,12 @@ before_action :correct_user, only: [:edit, :update]
   end
 
   def update
+    if @user.save(user_params)
+      flash[:success] = '編集しました'
+      redirect_to user_path(@user.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
