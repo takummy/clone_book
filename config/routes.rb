@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/login',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :pictures, except: :show do
+  resources :pictures do
     collection do
       post :confirm
     end

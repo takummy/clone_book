@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include PicturesHelper
 
   def require_login
     unless logged_in?
@@ -12,7 +13,7 @@ class ApplicationController < ActionController::Base
     user = User.find(params[:id])
     unless current_user?(user)
       flash[:danger] = '権限がありません'
-      redirect_to root
+      redirect_to root_path
     end
   end
 end

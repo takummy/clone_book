@@ -6,4 +6,9 @@ module PicturesHelper
       picture_path
     end
   end
+
+  def correct_owner
+    picture = Picture.find(params[:id])
+    picture.user_id == current_user
+  end
 end

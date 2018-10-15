@@ -1,7 +1,7 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:edit, :update, :destroy]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :require_login, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_owner, only: [:edit, :update, :destroy]
 
   def new
     if params[:back]
@@ -30,6 +30,9 @@ class PicturesController < ApplicationController
     @pictures = Picture.page(params[:page])
   end
 
+  def show
+  end
+
   def edit
   end
 
@@ -45,7 +48,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     flash[:success] = '削除しました'
-    pictures_path
+    redirect_to pictures_path
   end
 
   private
