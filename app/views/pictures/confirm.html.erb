@@ -3,6 +3,7 @@
 </div>
 
 <%= form_with(model: @picture, url: pictures_path, local: true) do |f| %>
+    <%= f.hidden_field :image %>
     <%= f.hidden_field :image_cache %>
     <%= f.hidden_field :content %>
     <div class="form-group">
@@ -19,8 +20,10 @@
 <% end %>
 
 <%= form_with(model: @picture, url: new_picture_path, method: :get, local: true) do |f| %>
-    <%= hidden_field :image_cache %>
+    <%= f.hidden_field :image %>
+    <%= f.hidden_field :image_cache %>
+    <%= f.hidden_field :content %>
     <div class="submit-button">
-        <%= submit '戻る', name: 'back' %>
+        <%= f.submit '戻る', name: 'back' %>
     </div>
 <% end %>
