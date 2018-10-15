@@ -11,6 +11,11 @@ before_action :correct_user, only: [:edit, :update]
     end
   end
 
+  def confirm
+    @user = User.new(user_params)
+    render :new if @user.invalid?
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -20,11 +25,6 @@ before_action :correct_user, only: [:edit, :update]
     else
       render :new
     end
-  end
-
-  def confirm
-    @user = User.new(user_params)
-    render :new if @user.invalid?
   end
 
   def show
@@ -37,7 +37,7 @@ before_action :correct_user, only: [:edit, :update]
   end
 
   def update
-    if @user.save(user_params)
+    if @user.update(user_params)
       flash[:success] = '編集しました'
       redirect_to user_path(@user.id)
     else

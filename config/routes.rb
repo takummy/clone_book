@@ -7,7 +7,13 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
+  get '/login',     to: 'sessions#new'
+  post '/login',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  resources :pictures, except: :show do
+    collection do
+      post :confirm
+    end
+  end
 end
