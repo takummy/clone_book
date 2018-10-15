@@ -4,7 +4,9 @@
   <li><%= image_tag @picture.image.url if @picture.image.url %></li>
   <li>
     <%= @picture.content %>
-    <%= link_to "編集", edit_picture_path(@picture) %>
-    <%= link_to "削除", picture_path, method: :delete, data: {confirm: "本当に削除しますか？"} %>
+    <% if correct_owner? %>
+      <%= link_to "編集", edit_picture_path(@picture) %>
+      <%= link_to "削除", picture_path, method: :delete, data: {confirm: "本当に削除しますか？"} %>
+    <% end %>
   </li>
 </ul>

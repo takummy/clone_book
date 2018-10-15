@@ -7,4 +7,5 @@ class Picture < ApplicationRecord
   validates :content, presence: true, length: {maximum: 140}
 
   paginates_per 10
+  default_scope -> {order(created_at: :desc)}
 end

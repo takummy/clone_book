@@ -7,8 +7,8 @@ module PicturesHelper
     end
   end
 
-  def correct_owner
+  def correct_owner?
     picture = Picture.find(params[:id])
-    picture.user_id == current_user
+    picture.user_id == current_user.id
   end
 end
