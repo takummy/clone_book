@@ -5,4 +5,6 @@ class Picture < ApplicationRecord
 
   validates :image, presence: true
   validates :content, presence: true, length: {maximum: 140}
+
+  paginates_per 10
 end

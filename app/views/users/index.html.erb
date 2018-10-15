@@ -1,1 +1,9 @@
-<h1>Index</h1>
+<h1>ユーザーリスト</h1>
+<%= page_entries_info @users %>
+<%= paginate @users %> 
+
+<% @users.each do |user| %>
+  <ul>
+    <li><%= link_to user.name, user %></li>
+  </ul>
+<% end %>

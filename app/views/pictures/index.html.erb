@@ -1,1 +1,9 @@
 <h1>投稿一覧</h1>
+<%= page_entries_info @pictures %>
+<%= paginate @pictures %>
+
+<div>
+  <% @pictures.each do |picture| %>
+    <li><%= image_tag picture.image.url %></li>
+  <% end %>
+</div>

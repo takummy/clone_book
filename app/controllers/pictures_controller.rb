@@ -27,7 +27,7 @@ class PicturesController < ApplicationController
   end
 
   def index
-
+    @pictures = Picture.page(params[:page])
   end
 
   def edit
