@@ -69,7 +69,11 @@ footer {
   margin: auto;
 }
 
-.btn.btn-primary.submit-button {
+.page-title {
+  text-align: center;
+}
+
+.btn.btn-primary.login-button {
   width: 66px;
   height: 24px;
   font-size: 0.5em;
@@ -92,5 +96,25 @@ footer {
     border-color: #14436d;
     margin-top: 32px;
     text-align: center;
+  }
+}
+
+input#picture_content {
+  height: 110px;
+}
+
+.content-container {
+  margin-top: 60px;
+}
+
+.submit-button {
+  text-align: center;
+  .btn.btn-primary {
+    font-size: 1.0em;
+    width: 116px;
+    height: 40px;
+    background-color: #5ba6e6;
+    border-color: #14436d;
+    margin-top: 30px;
   }
 }
