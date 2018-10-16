@@ -1,0 +1,13 @@
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+    <table>
+        <tr>
+            <td><%= f.label :email %></td>
+            <td><%= f.label :password %></td>
+        </tr>
+        <tr>
+            <td><%= f.email_field :email %></td>
+            <td><%= f.password_field :password %></td>
+            <td><%= f.submit 'ログイン', class: "btn btn-primary submit-button" %></td>
+        </tr>
+    </table>
+<% end %>

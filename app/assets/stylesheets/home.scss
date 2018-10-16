@@ -1,3 +1,96 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  font-size: 62.5%;
+  height: 100%; 
+}
+
+header {
+  width: 100%;
+  height: 83px;
+  .container-fluid {
+    height: 83px;
+    background-color: #0c6abb;
+
+    a#logo {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      padding: 5px;
+      margin: 13px 0 0 200px;
+      color: #f3f9f9;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .navbar-right {
+      margin-top: 7px;
+      input {
+        margin: 0 10px;
+        width: 170px;
+      }
+    }
+
+    label {
+      color: white;
+    }
+  }
+}
+
+
+body {
+  height: 100%;
+  background-color: #e9ebee;
+  position: relative;
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    min-height: 100%;
+  }
+}
+
+footer {
+  height: 60px;
+  width: 100%;
+  bottom: 0; 
+  background-color: white;
+  position: absolute;
+  display: table;
+  p {
+    color: #737373;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.col-center {
+  float: none;
+  margin: auto;
+}
+
+.btn.btn-primary.submit-button {
+  width: 66px;
+  height: 24px;
+  font-size: 0.5em;
+  background-color: #5ba6e6;
+  border-color: #14436d;
+}
+
+.jumbotron {
+  padding-top: 120px;
+  background-color: #e9ebee;
+  h1, p {
+    text-align: center;
+  }
+
+  .btn.btn-primary.signup-button {
+    font-size: 1.5em;
+    width: 110px;
+    height: 55px;
+    background-color: #5ba6e6;
+    border-color: #14436d;
+    margin-top: 32px;
+    text-align: center;
+  }
+}
