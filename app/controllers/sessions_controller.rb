@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
       flash[:success] = 'ログインしました'
       redirect_to user_path(user)
     else
-      flash.now[:danger] = 'ログインに失敗しました'
-      render :new
+      flash[:danger] = 'ログインに失敗しました'
+      redirect_to root_path
     end
   end
 
