@@ -1,9 +1,17 @@
-<h1>ユーザーリスト</h1>
-<%= page_entries_info @users %>
-<%= paginate @users %> 
-
-<% @users.each do |user| %>
-  <ul>
-    <li><%= link_to user.name, user %></li>
-  </ul>
-<% end %>
+<div class="row">
+  <h1 class="page-title">ユーザーリスト</h1>
+  <div class="page-navi">
+    <small>
+      <%= page_entries_info @users %>
+      <%= paginate @users %>   
+    </small>
+  </div>
+  
+  <div class="users-wrapper col-md-6 col-center row">
+    <ul class="col-center">  
+      <% @users.each do |user| %>
+        <li class="col-md-6 col-6"><%= link_to user.name, user %></li>
+       <% end %>
+     </ul>
+  </div>
+</div>

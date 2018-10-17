@@ -9,5 +9,5 @@ class User < ApplicationRecord
   validates :password_digest, presence: true, length: {minimum: 6}
   has_secure_password
 
-  paginates_per 10
+  paginates_per 20
 end
