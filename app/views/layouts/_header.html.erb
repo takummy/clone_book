@@ -4,11 +4,11 @@
             <%= link_to 'Clone Book', root_path, id: "logo", class: "col-md-6" %>
             <ul class="nav navbar-nav navbar-right col-md-6">
                 <% if logged_in? %>
-                    <li><%= link_to '新規投稿', new_picture_path %></li>
-                    <li><%= link_to '投稿一覧', pictures_path %></li>
-                    <li><%= link_to 'ユーザーリスト', users_path %></li>
-                    <li><%= link_to 'プロフィール', user_path(current_user.id) %></li>
-                    <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+                    <li class="col-md-6"><%= link_to '新規投稿', new_picture_path %></li>
+                    <li class="col-md-6"><%= link_to '投稿一覧', pictures_path %></li>
+                    <li class="col-md-6"><%= link_to 'ユーザーリスト', users_path %></li>
+                    <li class="col-md-6"><%= link_to 'プロフィール', user_path(current_user.id) %></li>
+                    <li class="col-md-6"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
                 <% else %>
                        <li><%= render 'layouts/login_form' %></li>
                 <% end %>
