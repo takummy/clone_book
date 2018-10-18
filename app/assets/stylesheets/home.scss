@@ -3,6 +3,10 @@ html {
   height: 100%; 
 }
 
+li {
+  list-style: none;
+}
+
 .alert {
   text-align: center;
 }
@@ -14,11 +18,19 @@ body {
     width: 100%;
     height: 100%;
     .container-fluid {
+      ul{
+        width: 555px;
+        height: 25px;
+      }
       .navbar-nav {
         li {
           width: 20%;
+          padding-top: 20px;
+          text-align: center;
           a {
             color: white;
+            padding: 0;
+            width: 100px
           }
         }
       }
@@ -39,7 +51,7 @@ body {
       }
 
       .navbar-right {
-        margin-top: 25px;
+        margin-top: 12px;
         input {
           margin: 0 10px;
           width: 170px;
@@ -210,4 +222,21 @@ input#picture_content {
     border-color: #14436d;
     margin-top: 30px;
   }
+}
+
+.back-button {
+  text-align: center;
+  .btn.btn-primary {
+    font-size: 0.1em;
+    width: 6%;
+    height: 2%;
+    background-color: #6d7479;
+    border-color: #14436d;
+    margin-top: 10px;
+  }
+}
+
+.form-groups {
+  padding: 50px 50px 0 50px;
+  text-align: center;
 }

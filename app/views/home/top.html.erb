@@ -1,14 +1,13 @@
 <div class="content-wrapper">
-  <div class="jumbotron">
-      <% if logged_in? %>
-          <%= provide(:title, "Home") %>
-          <h2>写真をUPしましょう！</h2>
-          <h2>コメントも投稿できます！</h2>
-
-      <% else %>
-          <h1>Welcome to Clone Book</h1>
-          <p><small>~フェイスブックのパクリです~</small></p>
-          <p><%= link_to '登録', new_user_path, class: "btn btn-primary signup-button" %></p>
-      <% end %>
-  </div>
+    <div class="jumbotron">
+        <% if logged_in? %>
+            <%= provide(:title, "Home") %>
+            <h2>写真をUPしましょう！</h2>
+            <h2>コメントも投稿できます！</h2>
+        <% else %>
+            <h1>Welcome to Clone Book</h1>
+            <p><small>~フェイスブックのパクリです~</small></p>
+            <p><%= link_to '登録', new_user_path, class: "btn btn-primary signup-button" %></p>
+        <% end %>
+    </div>
 </div>

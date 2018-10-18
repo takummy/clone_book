@@ -1,26 +1,26 @@
 <div class="row">
-  <h1 class="page-title">投稿一覧</h1>
-  
-  <p class="page-navi">
-    <small><%= page_entries_info @pictures %></small>
-  </p>
-  <%= paginate @pictures %>
-  <% @pictures.each do |picture| %>
-    <div class="posts-wrapper col-md-6 col-center"> 
-      <ul class="col-md-6 col-center">
-        <li><%= image_tag picture.image.url %></li>
-        <li>
-          <%= picture.content %>
-        </li>
-        <li class="posted-by">
-          <small id="owner">
-            <%= link_to user_path(picture.user.id) do %>
-              posted by <%= picture.user.name %> / 
-            <% end %>    
-          </small>
-          <small><%= link_to '詳細', picture_path(picture.id) %></small>
-        </li>
-      </ul> 
-    </div>
-  <% end %>
+    <h1 class="page-title">投稿一覧</h1>
+
+    <p class="page-navi">
+        <small><%= page_entries_info @pictures %></small>
+    </p>
+    <%= paginate @pictures %>
+    <% @pictures.each do |picture| %>
+        <div class="posts-wrapper col-md-6 col-center"> 
+            <ul class="col-md-6 col-center">
+                <li><%= image_tag picture.image.url %></li>
+                <li>
+                    <%= picture.content %>
+                </li>
+                <li class="posted-by">
+                    <small id="owner">
+                        <%= link_to user_path(picture.user.id) do %>
+                            posted by <%= picture.user.name %> / 
+                        <% end %>    
+                    </small>
+                    <small><%= link_to '詳細', picture_path(picture.id) %></small>
+                </li>
+            </ul> 
+        </div>
+    <% end %>
 </div>

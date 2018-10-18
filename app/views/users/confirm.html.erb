@@ -1,24 +1,30 @@
-<div>
-    <h2>以下の内容で送信する</h2>
-</div>
-<%= form_with(model: @user, url: users_path, local: true) do |f| %>
-    <%= f.hidden_field :name %>
-    <%= f.hidden_field :email %>
-    <div>
-        名前: <%= @user.name %>
-    </div>
-    <div>
-        メールアドレス: <%= @user.email %>
-    </div>
-    <div>
-        <%= f.submit %>
-    </div>
-<% end %>
+<div class="row">
+    <div class="content-container col-md-6 col-center">
+        <div>
+            <h2 class="page-title">以下の内容で送信する</h2>
+        </div>
+        <%= form_with(model: @user, url: users_path, local: true) do |f| %>
+            <%= f.hidden_field :name %>
+            <%= f.hidden_field :email %>
+            <div class="form-groups col-md-6 col-center">
+                <div>
+                    名前: <%= @user.name %>
+                </div>
+                <div>
+                    メールアドレス: <%= @user.email %>
+                </div>
+            </div>
+            <div class="submit-button">
+                <%= f.submit class: "btn btn-primary" %>
+            </div>
+        <% end %>
 
-<%= form_with(model: @user, url: new_user_path, method: :get, local: true) do |f| %>
-    <%= f.hidden_field :name %>
-    <%= f.hidden_field :email %>
-    <div class="submit-button">
-        <%= f.submit '戻る', name: 'back' %>
+        <%= form_with(model: @user, url: new_user_path, method: :get, local: true) do |f| %>
+            <%= f.hidden_field :name %>
+            <%= f.hidden_field :email %>
+            <div class="back-button">
+                <%= f.submit '戻る', name: 'back', class: "btn btn-primary" %>
+            </div>
+        <% end %>
     </div>
-<% end %>
+</div>

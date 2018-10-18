@@ -10,7 +10,7 @@
                     <li class="col-md-6"><%= link_to 'プロフィール', user_path(current_user.id) %></li>
                     <li class="col-md-6"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
                 <% else %>
-                       <li><%= render 'layouts/login_form' %></li>
+                    <%= render 'layouts/login_form' %>
                 <% end %>
             </ul>
         </div>
