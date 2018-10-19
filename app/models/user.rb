@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_secure_password
 
   paginates_per 20
+  default_scope -> {order(created_at: :desc)}
 end
