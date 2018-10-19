@@ -12,7 +12,7 @@
                 <% @user.pictures.each do |picture| %>
                     <ul class="col-md-4">
                         <%= link_to picture_path(picture.id) do %>
-                            <li><%= image_tag(picture.image.url) if picture.image %></li>
+                            <li><%= image_tag(picture.image.url) if picture.image.url %></li>
                         <% end %>
                     </ul>
                 <% end %>
