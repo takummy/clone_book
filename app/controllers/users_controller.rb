@@ -55,6 +55,6 @@ before_action :correct_user, only: [:edit, :update]
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_digest)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

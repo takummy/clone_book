@@ -6,6 +6,8 @@
         <%= form_with(model: @user, url: users_path, local: true) do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
+            <%= f.hidden_field :password %>
+            <%= f.hidden_field :password_confirmation %>
             <div class="form-groups col-md-6 col-center">
                 <div>
                     名前: <%= @user.name %>
