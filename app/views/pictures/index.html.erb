@@ -8,7 +8,7 @@
     <% @pictures.each do |picture| %>
         <div class="posts-wrapper col-md-6 col-center"> 
             <ul class="col-md-6 col-center">
-                <li><%= image_tag picture.image.url %></li>
+                <li><%= image_tag picture.image.url if picture.image.url %></li>
                 <li>
                     <%= picture.content %>
                 </li>
